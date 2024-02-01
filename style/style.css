@@ -1,33 +1,58 @@
-*{
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    background: #f0f0f0;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
+
+#weekdays {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Aligns the buttons to the left */
+    margin-left: 100px; /* Adds spacing from the left edge of the browser */
+}
+.day {
+    padding: 20px;
+    margin: 5px 0; /* Adds space between buttons */
+    color: white;
+    font-size: 16px;
+    border: 2px solid black; /* Adds a black border */
+    cursor: pointer;
+    text-align: center; /* Centers text inside the buttons */
+    width: 200px; /* Sets a specific width for each button */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+    background-color: #8a2be2; /* Default background color, can be overridden by individual IDs */
+}
+#monday { background-color: #8a2be2; }
+#tuesday { background-color: hsl(315, 100%, 80%); }
+#wednesday { background-color: #2600ff; }
+#thursday { background-color: #00ff00; }
+#friday { background-color: #ffd700; }
+#saturday { background-color: #ff703c; }
+#sunday { background-color: #ff0000; }
+.day:hover {
+    opacity: 0.8;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    display: none;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
 }
-
-.button-container {
-    display: flex;
-    gap: 10px;
-}
-
-#box {
-    width: 50px;
-    height: 50px;
-    background-color: #3498db;
-    position: absolute;
-    transition: all 0.5s ease-in-out;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(-100%);
+.day:hover {
+    transform: scale(1.05); /* Slightly enlarge the button when hovered */
+    opacity: 0.9; /* Slightly reduce the opacity when hovered */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for the effect */
 }
