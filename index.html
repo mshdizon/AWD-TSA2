@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Button Animation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week Days Buttons</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 <body>
-    <div class="button-container">
-        <button onclick="animateBox('Monday')">Monday</button>
-        <button onclick="animateBox('Tuesday')">Tuesday</button>
-        <button onclick="animateBox('Wednesday')">Wednesday</button>
-        <button onclick="animateBox('Thursday')">Thursday</button>
-        <button onclick="animateBox('Friday')">Friday</button>
-        <button onclick="animateBox('Saturday')">Saturday</button>
-        <button onclick="animateBox('Sunday')">Sunday</button>
+    <div id="weekdays">
+        <button class="day" id="monday">Monday</button>
+        <button class="day" id="tuesday">Tuesday</button>
+        <button class="day" id="wednesday">Wednesday</button>
+        <button class="day" id="thursday">Thursday</button>
+        <button class="day" id="friday">Friday</button>
+        <button class="day" id="saturday">Saturday</button>
+        <button class="day" id="sunday">Sunday</button>
     </div>
-    <div id="box" class="hidden"></div>
-    <script src="./script/script.js"></script>
+    <div id="popup" style="display: none;"></div>
 </body>
 </html>
