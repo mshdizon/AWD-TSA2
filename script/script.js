@@ -1,20 +1,11 @@
-function animateBox(day) {
-    const box = document.getElementById('box');
-    box.style.backgroundColor = getRandomColor();
-    box.style.opacity = '1';
-    box.style.transform = 'translateY(0)';
+document.querySelectorAll('.day').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var popup = document.getElementById('popup');
+        popup.style.backgroundColor = this.style.backgroundColor;
+        popup.style.display = 'flex'; // Show the popup
+    });
+});
 
-    setTimeout(() => {
-        box.style.opacity = '0';
-        box.style.transform = 'translateY(-100%)';
-    }, 1000);
-}
-
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+document.getElementById('popup').addEventListener('click', function() {
+    this.style.display = 'none'; // Hide the popup when clicked
+});
