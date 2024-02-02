@@ -36,23 +36,56 @@ body, html {
     opacity: 0.8;
 }
 
-#popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    border: 2px solid black;
-    box-sizing: border-box;
-}
 .day:hover {
     transform: scale(1.05); /* Slightly enlarge the button when hovered */
     opacity: 0.9; /* Slightly reduce the opacity when hovered */
     transition: transform 0.2s ease, opacity 0.2s ease; /* Smooth transition for the effect */
+}
+
+.popup {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 500px;
+    height: 500px;
+    transition: top 1.5s ease, background-color 1.5s ease;
+    border-width: 15px; 
+    border-style: solid;
+    opacity: 1;
+}
+
+#popup-monday {
+    background-color: rgb(138, 43, 226, 1);
+    border-color: #8a2be2;
+}
+
+#popup-tuesday {
+    background-color: rgb(255, 153, 230, 1);
+    border-color: #ff99e6;
+}
+
+#popup-wednesday {
+    background-color: rgb(38, 0, 255, 1);
+    border-color: #2600ff;
+}
+
+#popup-thursday {
+    background-color: rgb(0, 255, 0, 1);
+    border-color: #00ff00;
+}
+
+#popup-friday {
+    background-color: rgb(255, 215, 0, 1);
+    border-color: #ffd700;
+}
+
+#popup-saturday {
+    background-color: rgb(255, 112, 60, 1);
+    border-color: #ff703c;
+}
+
+#popup-sunday {
+    background-color: rgb(255, 0, 0, 1);
+    border-color: #ff0000;
 }
